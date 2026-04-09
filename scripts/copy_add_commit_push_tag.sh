@@ -5,7 +5,8 @@
 # then adds a version tag.
 
 # set the passim run ID
-passim_run="2025.1.9"
+openiti_release="2025.1.9"
+passim_run="${openiti_release}-pri"
 
 
 # Set the path to the folders:
@@ -48,5 +49,5 @@ done
 
 # add the tag: 
 echo "Create new tag: v$passim_run and push it to GitHub:"
-git tag -a "v$passim_run" -m "pairwise passim run, primary texts only, OpenITI release $passim_run"
+git tag -a "v$passim_run" -m "pairwise passim run, primary texts only, OpenITI release $openiti_release"
 git push "https://oauth:$ghtoken@github.com/kitab-project-org/pairwise-light.git" --tags
